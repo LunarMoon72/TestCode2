@@ -6,8 +6,6 @@ namespace LunarMoon72\TestCode2;
 
 use pocketmine\plugin\PluginBase;
 
-use pocketmine\plugin\PluginBase;
-
 use pocketmine\Player;
 
 use pocketmine\Server;
