@@ -10,23 +10,22 @@ use pocketmine\plugin\PluginBase;
 
 use pocketmine\Player;
 
+use pocketmine\Server;
+
 use pocketmine\event\Listener;
 
 class Main extends PluginBase implements Listener{
+    public function onEnabled(){
+        $this->getServer()->getPluginManager()->registerEvents($this,$this);
+        $this->getLogger()->info("Plugin is Enabled");
 
-	public function onEnabled(){
-		$this->getLogger()->info("Plugin is Enabled");
-
-	}
-
-    public function onJoin(PlayerJoinEvent $event){
-    	$player = $event->getPlayer();
-    	$name = $player->getName();
-    	$inv = $player->getInventory();
-
-    	$this->getServer()->boradcastMessage("$name has Joined the server!");
-    	$item = Item::get(345, 0 , 1);
-    	$inv->setItem(0, $item);
     }
 
+    public function onJoin(PlayerJoinEvent $event){
+       $player = $event->getPlayer();
+       $name = $player->getName();
+
+       $this->getServer()->broadcastMessage("$name has joined!")
+    }
+    
 }
