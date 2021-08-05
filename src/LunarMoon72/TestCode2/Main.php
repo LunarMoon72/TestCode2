@@ -18,12 +18,7 @@ class Main extends PluginBase implements Listener{
 		$this->getLogger()->info("Plugin is Enabled");
 
 	}
-    
-    public function onDisabled(){
-    	$this->getLogger()->info("Plugin is Disabled")
 
-    }
-    
     public function onJoin(PlayerJoinEvent $event){
     	$player = $event->getPlayer();
     	$name = $player->getName();
