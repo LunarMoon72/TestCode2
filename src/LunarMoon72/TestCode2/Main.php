@@ -13,10 +13,15 @@ use pocketmine\Server;
 use pocketmine\event\Listener;
 
 class Main extends PluginBase implements Listener{
-    public function onEnabled(){
-        $this->getServer()->getPluginManager()->registerEvents($this,$this);
-        $this->getLogger()->info("Plugin is Enabled");
-
+    public function onLoad(){
+                    $this->getLogger()->info("Plugin Loading");
+    }
+    public function onEnable(){
+       $this->getServer()->getPluginManager()->registerEvents($this,$this);
+       $this->getLogger()->info("Enabled Plugin");
+    }
+    public function onDisable(){
+       $this->getLogger()->info("Plugin Disabled");
     }
 
     public function onJoin(PlayerJoinEvent $event){
