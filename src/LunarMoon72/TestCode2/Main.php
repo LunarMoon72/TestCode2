@@ -32,7 +32,7 @@ class Main extends PluginBase implements Listener{
        $player = $event->getPlayer();
        $name = $player->getName();
 
-       $this->getServer()->broadcastMessage("$name has joined!");
+       $this->getServer()->broadcastMessage("$name Welcome back!");
     }
     
 }
