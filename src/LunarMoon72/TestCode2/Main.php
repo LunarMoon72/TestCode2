@@ -12,8 +12,6 @@ use pocketmine\Server;
 
 use pocketmine\event\Listener;
 
-use pocketmine\utils\TextFormat as C;
-
 class Main extends PluginBase implements Listener{
     public function onEnabled(){
         $this->getServer()->getPluginManager()->registerEvents($this,$this);
@@ -21,11 +19,11 @@ class Main extends PluginBase implements Listener{
 
     }
 
-    public function onJoin(PlayerJoinEvent, $event){
+    public function onJoin(PlayerJoinEvent $event){
        $player = $event->getPlayer();
        $name = $player->getName();
 
-       $this->getServer()->broadcastMessage(TextFormat::GREEN."$name has joined!");
+       $this->getServer()->broadcastMessage("$name has joined!");
     }
     
 }
