@@ -10,6 +10,10 @@ use pocketmine\Player;
 
 use pocketmine\Server;
 
+use pocketmine\event\player\PlayerJoinEvent;
+
+use pocketmine\event\player\PlayerQuitEvent;
+
 use pocketmine\event\Listener;
 
 class Main extends PluginBase implements Listener{
